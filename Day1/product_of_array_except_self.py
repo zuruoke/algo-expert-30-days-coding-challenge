@@ -1,4 +1,5 @@
-from functools import reduce
+from functools import reduce, total_ordering
+from sys import prefix
 from typing import List
 from operator import mul
 
@@ -26,7 +27,6 @@ class Solution():
                 continue
             total = self.prefix[-1] * num
             self.prefix.append(total)
-
         for i in range(len(self.nums) - 1, -1, -1):
             if (i == len(self.nums) - 1):
                 continue
@@ -52,3 +52,22 @@ instance_solution_1 = Solution(nums=nums)
 instance_solution_2 = Solution(nums=nums)
 print(instance_solution_1.naive_pre_pos_fix())
 print(instance_solution_2.naive_solution())
+
+
+# def fin():
+#     res = [1] * (len(nums))
+
+#     prefix = 1
+#     for i in range(len(nums)):
+#         res[i] = prefix
+#         prefix *= nums[i]
+#     print("prefix is {}".format(res))
+#     postfix = 1
+#     for i in range(len(nums) - 1, -1, -1):
+#         res[i] *= postfix
+#         postfix *= nums[i]
+#     print("postfix is {}".format(res))
+#     return res
+
+
+# print(fin())
