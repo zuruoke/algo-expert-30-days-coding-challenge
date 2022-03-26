@@ -1,7 +1,6 @@
 from functools import reduce
 from typing import List
 from operator import mul
-from unittest import result
 
 
 class Solution():
