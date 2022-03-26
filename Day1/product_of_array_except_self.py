@@ -36,10 +36,10 @@ class Solution():
 
         for i, num in enumerate(self.nums):
             if (i == 0):
-                total = 1 * self.postfix[i + 1]
+                total = self.postfix[i + 1]
                 self.result.append(total)
             elif (i == len(self.nums) - 1):
-                total = self.prefix[i - 1] * 1
+                total = self.prefix[i - 1]
                 self.result.append(total)
             else:
                 total = self.prefix[i - 1] * self.postfix[i + 1]
