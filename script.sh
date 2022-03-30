@@ -9,4 +9,7 @@
 #python3 play_ground.py
 #python3 Day2/minimum_rotated_sorted_array.py
 #python3 Day2/maximum_product_subarray.py
-python3 Day2/search_in_rotated_sorted_array.py
+#python3 Day2/search_in_rotated_sorted_array.py
+#python3 Day3/three_sum.py
+#python3 Day3/container_with_most_water.py
+python3 Day3/sum_of_two_integers.py
