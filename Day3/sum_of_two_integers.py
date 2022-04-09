@@ -1,6 +1,6 @@
 
 def getSum(a: int, b: int) -> int:
-    mask = 0xffffffff
+    mask = -1
 
     while (b & mask) > 0:
         carry = (a & b) << 1
@@ -10,4 +10,4 @@ def getSum(a: int, b: int) -> int:
     return (a & mask) if b > 0 else a
 
 
-print(getSum(a=5, b=7))
+print(getSum(a=5, b=9))
