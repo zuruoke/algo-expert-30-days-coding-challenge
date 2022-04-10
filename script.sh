@@ -14,4 +14,6 @@
 #python3 Day3/container_with_most_water.py
 #python3 Day3/sum_of_two_integers.py
 #python3 Day4/climbing_stairs.py
-python3 Day4/coin_change.py
+# python3 Day4/coin_change.py
+# python3 Day5/longest_increasing_subsequence.py
+python3 Day5/common_longest_subsequence.py
