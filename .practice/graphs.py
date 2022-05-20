@@ -1,3 +1,4 @@
+from itertools import count
 from operator import ne
 from platform import node
 from typing import Any, List
@@ -151,3 +152,59 @@ def undirected_graph_soln(undirected_graph, nodeA, nodeB, memo):
 
 
 print(undirected_graph_soln(undirected_graph, "j", "o", set()))
+
+connected_components_graph = {
+    0: [8, 1, 5],
+    1: [0],
+    5: [0, 8],
+    8: [0, 5],
+    2: [3, 4],
+    3: [2, 4],
+    4: [3, 2]
+}
+
+
+def explore(graph, current_node, visited):
+    if (current_node in visited):
+        return False
+    visited.add(current_node)
+    for neighbor in graph[current_node]:
+        explore(graph, neighbor, visited)
+
+    return True
+
+
+def connected_components_count(graph):
+    visited = set()
+    count = 0
+    for node in graph:
+        if (explore(graph, node, visited)):
+            count += 1
+    return count
+
+
+print(connected_components_count(connected_components_graph))
+
+
+def exploreSize(graph, current_node, visited):
+    if current_node in visited:
+        return 0
+    visited.add(current_node)
+    size = 1
+
+    for neighbor in graph[current_node]:
+        size += exploreSize(graph, neighbor, visited)
+
+    return size
+
+
+def largest_component(graph):
+    visited = set()
+    largest = 0
+    for node in graph:
+        size = exploreSize(graph, node, visited)
+        largest = max(largest, size)
+    return largest
+
+
+print(largest_component(connected_components_graph))
