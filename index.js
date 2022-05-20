@@ -38,4 +38,38 @@ const cls = (text1, text2) => {
   return arr[0][0];
 };
 
-console.log(cls(text1, text2));
+// console.log(cls(text1, text2));
+
+const find_mod = (dividend, divisor) => {
+  quotient = Math.floor(dividend / divisor);
+  value = divisor * quotient;
+  value = dividend - value;
+  return value;
+};
+
+dividend = 878;
+divisor = 8912;
+console.log(find_mod(dividend, divisor));
+
+const graph = {
+  a: ["b", "c"],
+  b: ["d"],
+  c: ["e"],
+  d: ["f"],
+  e: [],
+  f: [],
+};
+
+const depth_first = (graph, source) => {
+  const stack = [source];
+
+  while (stack.length > 0) {
+    const current = stack.pop();
+    console.log(current);
+    for (const n of graph[current]) {
+      stack.push(n);
+    }
+  }
+};
+
+depth_first(graph, "a");
