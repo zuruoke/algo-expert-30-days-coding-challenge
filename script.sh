@@ -2,6 +2,7 @@
 
  #python3 .practice/test.py
 python3 .practice/graphs.py
+#python3 Day5/longest_consecutive_sequence.py
 
 #python3 Day1/contains_duplicate.py
 #python3 Day1/sliding_window.py
