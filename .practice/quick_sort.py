@@ -17,7 +17,7 @@ def quick_sort(arr):
         new_arr = swap_element(arr)
         return new_arr
     else:
-        pivot = arr[0]
+        pivot = arr[len(arr) // 2]
         less = [i for i in arr[1:] if i < pivot]
         greater = [i for i in arr[1:] if i > pivot]
 
